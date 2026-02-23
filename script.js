@@ -1,1 +1,2 @@
-hier schrijven we de code die onze functies laten werken
+/*hier schrijven we de code die onze functies laten werken*/
+
