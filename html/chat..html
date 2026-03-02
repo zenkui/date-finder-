@@ -1,47 +1,49 @@
-<!-- hier bouwen wij de foundation van de -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Finder UI</title>
+    <title>Finder Chats</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
- <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chat.css">
 </head>
-
 <body>
 
+    <!-- Top bar -->
     <div class="top-bar">
         <div class="heart-box">❤️</div>
         <button class="finder-btn">FINDER</button>
     </div>
 
+    <!-- Sub-buttons -->
     <div class="sub-buttons">
         <button>filter</button>
-        <button>chats</button>
+        <button class="active">chats</button>
     </div>
 
-    <div class="cards-wrapper">
-        <div class="arrow">←</div>
+    <!-- Matches / Chats section -->
+    <div class="chats-wrapper">
 
-        <div class="card">
+        <!-- Example chat card -->
+        <div class="chat-card">
             <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Sarah">
             <h3>Sarah Jenkins</h3>
-            <p>24 years</p>
-            <p>New York, NY</p>
+            <p class="last-message">Hey! How was your weekend?</p>
         </div>
 
-        <div class="card">
+        <div class="chat-card">
             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Michael">
             <h3>Michael Chen</h3>
-            <p>28 years</p>
-            <p>San Francisco, CA</p>
+            <p class="last-message">Sounds good, let's meet tomorrow.</p>
         </div>
 
-        <div class="arrow">→</div>
+        <div class="chat-card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Emma">
+            <h3>Emma Williams</h3>
+            <p class="last-message">Can't wait for our trip!</p>
+        </div>
+
+        <!-- Add more chat cards as needed -->
+
     </div>
 <script>
     // Select the buttons individually
@@ -50,11 +52,11 @@
 
     // Navigate when clicked
     homeButton.addEventListener('click', () => {
-        window.location.href = 'filter.html'; // path to your home page
+        window.location.href = 'index.html'; // path to your home page
     });
 
     chatsButton.addEventListener('click', () => {
-        window.location.href = 'chat.html'; // path to your chats page
+        window.location.href = 'filter.html'; // path to your chats page
     });
 </script>
 </body>
