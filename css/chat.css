@@ -62,9 +62,9 @@ body {
 }
 
 .sub-buttons button.active {
-    background: #3b4cca;
-    color: white;
-    border-color: #3b4cca;
+    background:white;
+    color: black;
+    border-color: grey;
 }
 
 /* Chats Wrapper */
@@ -79,7 +79,7 @@ body {
 /* Chat Card */
 .chat-card {
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers the image with the text block */
     background: #f4f4f4;
     border: 1px solid #d5d5d5;
     padding: 15px 20px;
@@ -99,46 +99,38 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
+    flex-shrink: 0; /* Prevents image from squishing */
 }
 
-/* Chat info (name + last message) */
+/* The magic fix: This container stacks the name and message */
 .chat-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    justify-content: center;
 }
 
 .chat-info h3 {
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #1f2a37;
 }
 
 .chat-info .last-message {
     font-size: 14px;
-    color: #5f6b7a;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    .chat-card {
-        padding: 10px 15px;
-    }
-
+    body { padding: 20px; }
+    
     .chat-card img {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
 
-    .chat-info h3 {
-        font-size: 16px;
-    }
-
-    .chat-info .last-message {
-        font-size: 13px;
-    }
-
-    .sub-buttons button, .finder-btn {
-        padding: 12px 30px;
-        font-size: 16px;
-    }
+    .chat-info h3 { font-size: 16px; }
 }
